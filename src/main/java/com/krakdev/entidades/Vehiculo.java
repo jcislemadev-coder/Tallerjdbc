@@ -9,6 +9,7 @@ public class Vehiculo {
 		double precio;
 		String color;
 		boolean disponible;
+		int kilometraje;
 
 
 		public Vehiculo() {
@@ -68,11 +69,20 @@ public class Vehiculo {
 		}
 		public void setDisponible(boolean disponible) {
 			this.disponible = disponible;
+			
+		}
+		
+		public int getKilometraje() {
+			return kilometraje;
+		} 
+		
+		public void setKilometraje(int kilometraje) {
+			this.kilometraje = kilometraje;
 		}
 		@Override
 		public String toString() {
 			return "Vehiculo [placa=" + placa + ", marca=" + marca + ", modelo=" + modelo + ", anio=" + anio
-					+ ", precio=" + precio + ", color=" + color + ", disponible=" + disponible + "]";
+					+ ", precio=" + precio + ", color=" + color + ", disponible=" + disponible + ", kilometraje: "+ kilometraje + "]";
 		}
 
 

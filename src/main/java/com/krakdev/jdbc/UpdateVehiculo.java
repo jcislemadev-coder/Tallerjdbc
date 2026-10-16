@@ -23,7 +23,8 @@ public class UpdateVehiculo {
 					anio = ?,
 					precio = ?,
 					color = ?,
-					disponible = ?
+					disponible = ?,
+					kilometraje = ?
 					WHERE placa = ?
 					""";
 
@@ -34,7 +35,9 @@ public class UpdateVehiculo {
 			ps.setDouble(4, 480.59);
 			ps.setString(5, "ROJO");
 			ps.setBoolean(6, false);
-			ps.setString(7, "PXF0887");
+			ps.setInt(7, 800);
+			ps.setString(8, "PXF0887");
+			
 
 			int fila = ps.executeUpdate();
 

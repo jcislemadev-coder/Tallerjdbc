@@ -33,7 +33,8 @@ public class SelectVehiculo {
 						Double precio = rs.getDouble("precio");
 						String color = rs.getString("color");
 						Boolean disponible = rs.getBoolean("disponible");
-						log.info("Vehiculo--- \nPlaca: "+ placa +"\nMarca: "+ marca + "\nModelo: "+ modelo+ "\nAño: "+anio+"\nPrecio: "+precio+"\nColor: "+color+"\nDisponible: "+disponible );
+						int kilometraje = rs.getInt("kilometraje");
+						log.info("Vehiculo--- \nPlaca: "+ placa +"\nMarca: "+ marca + "\nModelo: "+ modelo+ "\nAño: "+anio+"\nPrecio: "+precio+"\nColor: "+color+"\nDisponible: "+disponible+"\nKilometraje: "+kilometraje );
 					}
 				}catch(Exception e){
 					log.error("ERROR AL TRAER LOS DATOS", e);
