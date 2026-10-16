@@ -1,0 +1,28 @@
+package com.krakdev.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+public class Conexion {
+
+	private static final Logger log = LogManager.getLogger(Conexion.class);
+	private static final String URL =
+	        "jdbc:postgresql://localhost:5432/tallerjdbc";
+	private static final String USER = "postgres";
+	private static final String PASSWORD = "Amoprograma1511";
+
+	public static Connection getConnection() {
+			try{
+				Connection con = DriverManager.getConnection(URL,USER,PASSWORD);
+				log.info("Conexion Exitosa");
+				return con;
+			}catch(SQLException e){
+			log.error("ERROR EN LA CONEXION",e.getMessage());
+			throw new RuntimeException("Error EN CONEXION",e);
+			}	
+			}
+}
